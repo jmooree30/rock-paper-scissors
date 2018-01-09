@@ -3,9 +3,46 @@
 <head>
   <title>Rock Paper Scissors</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <script type="text/javascript" src="js/rock-paper-scissors.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Rock Paper Scissors</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div id="hidden" class="col-sm-12">
+        <h2> </h2>
+        <h4> </h4>
+        <p> </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button id="rock" class="button">Rock</button>
+        <button id="paper" class="button">Paper</button>
+        <button id="scissors" class="button">Scissors</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button id="start" class="button1">Start game</button>
+        <button id="reset" class="button1">Reset</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <img src='pic.png' style="margin-top: 30px; height: 300px;">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/gui.js"></script>
 </body>
 </html>

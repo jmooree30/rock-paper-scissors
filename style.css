@@ -1,0 +1,43 @@
+body{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Indie Flower', cursive !important;
+  font-size: 60px !important;
+}
+
+#hidden{
+  height: 120px;
+}
+
+[class*='button']{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #6abfc3;
+  box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 3.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  margin:5px;
+}
+
+.button:hover{
+  color: black;
+}
+
+.button1:hover{
+  color: green;
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    display:none;
+  }
+}
