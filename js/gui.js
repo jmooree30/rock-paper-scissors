@@ -1,12 +1,15 @@
-let computerScore = 0
-let humanScore = 0
+let computerScore = 0;
+let humanScore = 0;
 const h4 = document.querySelector('h4');
 const h2 = document.querySelector('h2');
 
 function reset(){
- humanScore = 0
- computerScore = 0
+ const content = document.querySelector('p');
+ humanScore = 0;
+ computerScore = 0;
  h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
+ content.textContent = "";
+ h2.textContent = "";
 }
 
 function buttonReset(){
@@ -20,7 +23,13 @@ function computerChoice() {
 
 function playRound(human, computer) {
   const content = document.querySelector('p');
-  if (human === computer){
+  if (computerScore == 5){
+    return;
+  }
+  else if (humanScore == 5){
+    return;
+  }
+  else if (human === computer){
     content.textContent = 'tie';
     h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
   }
@@ -45,24 +54,19 @@ function playRound(human, computer) {
     h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
   }
   if (computerScore == 5){
-    reset();
     h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
     h2.textContent = 'Computer wins!';
-    setTimeout(function(){
-      h2.textContent = ''
-    }, 2000);
+
   }
   else if (humanScore == 5){
-    reset();
     h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
     h2.textContent = 'You win!';
-    setTimeout(function(){
-      h2.textContent = '';
-    }, 2000);
+
   }
 }
 
 function game(){
+  document.getElementById('start').id = 'two';
   h4.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
   const buttons = document.querySelectorAll('.button');
   buttons.forEach((button) => {
@@ -73,7 +77,7 @@ function game(){
 }
 
 function startGame(){
-  document.querySelector('#start').addEventListener('click', game)
+  document.querySelector('#start').addEventListener('click', game);
 }
 
 buttonReset()
